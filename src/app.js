@@ -143,7 +143,7 @@ function App() {
       const betEvent = receipt.events?.find(event => event.event === "BetPlaced");
       
       if (betEvent) {
-        const [player, amount, outcome, won] = betEvent.args;
+       const [, amount, outcome, won] = betEvent.args;
         
         // Update state based on event data
         setCoinResult(outcome ? "heads" : "tails");
